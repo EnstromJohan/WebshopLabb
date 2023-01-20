@@ -11,6 +11,11 @@ internal class DirectoryController
         this.filmsDAO = filmsDAO;
     }
 
+    FilmsODM CreateFilm()
+    {
+        return new FilmsODM { Title = io.UserInput(), Director = io.UserInput(), Genre = io.UserInput(), Price = int.Parse(io.UserInput()) };
+    }
+
     public void Start()
     {
         io.Print("Lägg till en film");
